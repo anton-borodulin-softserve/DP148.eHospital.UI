@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { DiseaseService } from '../disease.service';
 
 @Component({
@@ -6,16 +6,16 @@ import { DiseaseService } from '../disease.service';
   templateUrl: './diseases.component.html',
   styleUrls: ['./diseases.component.css']
 })
-export class DiseasesComponent implements OnInit {
+export class DiseasesComponent  {
 
-  diseases = {}
+  public diseaseData: Array<any>;
+  public currentDisease: any;
 
-  constructor(private api: DiseaseService) { }
+  displayedColumns: string[] = ['id', 'name'];
+  dataSource = this.diseaseData;
 
-  ngOnInit() {
-    this.api.getDiseases().subscribe(res => {
-      console.log(res);
-    });
+  constructor(private diseaseService: DiseaseService) {
+    diseaseService.getDiseases().subscribe((data: any) => this.diseaseData = data);
+    //this.currentGenre = this.setInitialValuesForGenreData(); 
   }
-
 }

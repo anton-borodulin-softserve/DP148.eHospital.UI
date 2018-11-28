@@ -1,16 +1,16 @@
-
 <table class="table">
   <thead class="thead-light">
     <tr>
       <th>ID</th>
       <th>NAME</th>
-      <!--<th>MANAGE</th>-->
+      <th>SURNNAME</th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let disease of diseaseData">
-      <td>{{ disease.id  }}</td>
-      <td>{{ disease.name  }}</td>
+    <tr *ngFor="let patient of patientData">
+      <td>{{ patient.id  }}</td>
+      <td>{{ patient.firstname  }}</td>
+      <td>{{ patient.lastname  }}</td>
       <!--<td>
         <a href="#" (click)="editRecord(genreInfo)">Edit</a>
         <a href="#" (click)="deleteRecord(genreInfo)">Delete</a>
@@ -18,9 +18,3 @@
     </tr>
   </tbody>
 </table>
-
-
-
-
-
-

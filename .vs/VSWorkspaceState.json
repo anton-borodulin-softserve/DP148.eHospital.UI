@@ -1,0 +1,17 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\EHospital-FrontEnd",
+    "\\EHospital-FrontEnd\\src",
+    "\\EHospital-FrontEnd\\src\\app",
+    "\\EHospital-FrontEnd\\src\\app\\patient-main",
+    "\\EHospital-FrontEnd\\src\\app\\patient-table",
+    "\\EHospital-FrontEnd\\src\\app\\recent-patient-table",
+    "\\EHospital-FrontEnd\\src\\app\\SHARED",
+    "\\EHospital-FrontEnd\\src\\app\\SHARED\\left-menu",
+    "\\EHospital-FrontEnd\\src\\app\\SHARED\\logout-bar",
+    "\\EHospital-FrontEnd\\src\\app\\SHARED\\top-bar"
+  ],
+  "SelectedNode": "\\EHospital-FrontEnd\\src\\app\\diseases\\diseases.component.ts",
+  "PreviewInSolutionExplorer": false
+}
