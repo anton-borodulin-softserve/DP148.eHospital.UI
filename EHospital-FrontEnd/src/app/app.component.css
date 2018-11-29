@@ -1,40 +1,28 @@
-/*html,
-body {
-  height: 100%;
-  padding: 0;
-  margin: 0;
+.container{
+  padding:1px;
 }
-
-.container {
-  height: 100%;
-  display: -ms-flexbox;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-box;
-  display: box;
-  -ms-flex-direction: row;
-  -webkit-box-orient: horizontal;
-  -moz-box-orient: horizontal;
-  -ms-box-orient: horizontal;
-  box-orient: horizontal;
+#div-top-bar{
+  height:10%;
+  text-align:center;
+  background-color:darkgrey;
 }
-
-.nav {
-  background: hotpink;
-  width: 100px;
-  -ms-flex: 0 100px;
-  -webkit-box-flex: 0;
-  -moz-box-flex: 0;
-  -ms-box-flex: 0;
-  box-flex: 0;
-}*/
-
-
-.main {
-  background: aliceblue;
-  -ms-flex: 1;
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
-  -ms-box-flex: 1;
-  box-flex: 1;
+#div-left-menu {
+  background-color: darkcyan;  
+  border: 1px solid;
+}
+#div-patient-table{
+  background-color:azure;  
+  border:1px solid;
+}
+#div-patient-recent-table {
+  background-color:beige;  
+  border: 1px solid;
+}
+#div-patient-details-form {
+  background-color:khaki;  
+  border: 1px solid;
+}
+#div-logout-bar{
+  background-color:coral;
+  border:1px solid;
 }

@@ -4,14 +4,11 @@
     "\\EHospital-FrontEnd",
     "\\EHospital-FrontEnd\\src",
     "\\EHospital-FrontEnd\\src\\app",
+    "\\EHospital-FrontEnd\\src\\app\\models",
     "\\EHospital-FrontEnd\\src\\app\\patient-main",
     "\\EHospital-FrontEnd\\src\\app\\patient-table",
-    "\\EHospital-FrontEnd\\src\\app\\recent-patient-table",
-    "\\EHospital-FrontEnd\\src\\app\\SHARED",
-    "\\EHospital-FrontEnd\\src\\app\\SHARED\\left-menu",
-    "\\EHospital-FrontEnd\\src\\app\\SHARED\\logout-bar",
-    "\\EHospital-FrontEnd\\src\\app\\SHARED\\top-bar"
+    "\\EHospital-FrontEnd\\src\\app\\recent-patient-table"
   ],
-  "SelectedNode": "\\EHospital-FrontEnd\\src\\app\\diseases\\diseases.component.ts",
+  "SelectedNode": "\\EHospital-FrontEnd\\src\\app\\disease.service.ts",
   "PreviewInSolutionExplorer": false
 }

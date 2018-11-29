@@ -3,18 +3,19 @@
     <tr>
       <th>ID</th>
       <th>NAME</th>
-      <th>SURNNAME</th>
+      <th>SURNAME</th>
+      <th>MANAGE</th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let patient of patientData">
+    <tr *ngFor="let patient of patientsData">
       <td>{{ patient.patientId  }}</td>
       <td>{{ patient.firstName  }}</td>
       <td>{{ patient.lastName  }}</td>
-      <!--<td>
-    <a href="#" (click)="editRecord(genreInfo)">Edit</a>
-    <a href="#" (click)="deleteRecord(genreInfo)">Delete</a>
-  </td>-->
+      <td>
+    <a href="#" (click)="editRecord(patient)">Edit</a>
+    <!--<a href="#" (click)="deleteRecord(genreInfo)">Delete</a>-->
+  </td>
     </tr>
   </tbody>
 </table>
