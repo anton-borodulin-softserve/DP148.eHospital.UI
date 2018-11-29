@@ -10,7 +10,7 @@ import { AppComponent } from './app.component';
 import { DiseaseComponent } from './disease/disease.component';
 import { DiseasesComponent } from './diseases/diseases.component';
 
-import { DiseaseService } from './disease.service';
+import { DiseaseService } from './diseases/services/disease.service';
 import { PatientService } from './patient.service';
 
 import { LeftMenuComponent } from './SHARED/left-menu/left-menu.component';

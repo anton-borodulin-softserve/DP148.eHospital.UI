@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { DiseaseService } from '../disease.service';
+import { DiseaseService } from './services/disease.service';
 
 @Component({
   selector: 'app-diseases',
@@ -11,11 +11,13 @@ export class DiseasesComponent  {
   public diseaseData: Array<any>;
   public currentDisease: any;
 
-  displayedColumns: string[] = ['id', 'name'];
-  dataSource = this.diseaseData;
-
   constructor(private diseaseService: DiseaseService) {
-    diseaseService.getDiseases().subscribe((data: any) => this.diseaseData = data);
-    //this.currentGenre = this.setInitialValuesForGenreData(); 
+    diseaseService.getDiseases().subscribe(
+      res => {
+        this.diseaseData = res;
+      console.log(res);
+      },
+      err => console.log('Error retrieving diseases')
+    );
   }
 }
