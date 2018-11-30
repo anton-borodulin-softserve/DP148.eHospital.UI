@@ -13,10 +13,11 @@ import { PatientService } from './patient/services/patient.service';
 import { LeftMenuComponent } from './shared/left-menu/left-menu.component';
 import { TopBarComponent } from './shared/top-bar/top-bar.component';
 import { RightBarComponent } from './shared/right-bar/right-bar.component';
+import { PatientMainComponent } from './patient/patient-main/patient-main.component';
 
 const appRoutes: Routes = [
   { path: '', component: AppComponent },
-  { path: 'patient', component: PatientsComponent }
+  { path: 'patient', component: PatientMainComponent }
 
 ];
 
@@ -28,10 +29,12 @@ const appRoutes: Routes = [
     PatientDetailsComponent,
     LeftMenuComponent,
     TopBarComponent,
-    RightBarComponent
+    RightBarComponent,
+    PatientMainComponent
   ],
   imports: [
     BrowserModule,
+    RouterModule.forRoot(appRoutes),
     HttpClientModule,
     FormsModule
   ],
