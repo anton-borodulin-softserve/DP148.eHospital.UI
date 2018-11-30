@@ -33,14 +33,10 @@ export class PatientService {
     }));
   }
 
-  public getPatientById(): Observable<PatientRequest> {
+  public getPatientById(payload): Observable<PatientRequest> {
     // Get patient by Id as detailed.
-    return this.http.get<PatientRequest>(this.accessPointUrl + '/id=1', { headers: this.headers });
-    
+    return this.http.get<PatientRequest>(this.accessPointUrl + '/id=' + payload.id, { headers: this.headers });
 
-    //return this.http.get<PatientRequest>(this.accessPointUrl + '/id=1', { headers: this.headers }).pipe(map(response => {
-    //  return response;
-    //}));
   }
   
 }

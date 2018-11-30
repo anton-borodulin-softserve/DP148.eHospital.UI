@@ -16,7 +16,7 @@ import { RightBarComponent } from './shared/right-bar/right-bar.component';
 import { PatientMainComponent } from './patient/patient-main/patient-main.component';
 
 const appRoutes: Routes = [
-  { path: '', component: AppComponent },
+  { path: '', component: AppComponent },  
   { path: 'patient', component: PatientMainComponent }
 
 ];

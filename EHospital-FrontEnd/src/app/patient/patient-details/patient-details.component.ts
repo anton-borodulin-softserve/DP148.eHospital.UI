@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { PatientService } from '../services/patient.service';
 import { PatientRequest } from '../models/patient';
+import { PatientViewRequest } from '../models/patientView';
 
 @Component({
   selector: 'app-patient-details',
@@ -9,19 +10,37 @@ import { PatientRequest } from '../models/patient';
 })
 export class PatientDetailsComponent implements OnInit {
 
-  public patient = new PatientRequest();
+  @Input() patient: PatientViewRequest;
+  public patientDetails = new PatientRequest();
 
-  constructor(private patientService: PatientService) {
-    patientService.getPatientById().subscribe(
-      res => {
-        this.patient = res;
-        console.log(res);
-      },
-      err => console.log('Error retrieving diseases')
-    );
+  constructor() {    
+    this.clearPatientData();
   }
+
+  //constructor(private patientService: PatientService) {
+  //  patientService.getPatientById(this.patient).subscribe(
+  //    res => {
+  //      this.patientDetails = res;
+  //      console.log(res);
+  //    },
+  //    err => console.log('Error retrieving diseases')
+  //  );
+  //}
 
   ngOnInit() {
   }
+
+  private clearPatientData = function () {  
+    this.patientDetails = {
+      patientid: undefined,
+      firstname: '',
+      lastname: '',
+      country: '',
+      city: '',
+      address: '',
+      phone: '',
+      email: ''
+    };
+  };
 
 }

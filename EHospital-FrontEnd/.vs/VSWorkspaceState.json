@@ -3,7 +3,13 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\patient"
+    "\\src\\app\\patient",
+    "\\src\\app\\patient\\models",
+    "\\src\\app\\patient\\patient-details",
+    "\\src\\app\\patient\\patient-main",
+    "\\src\\app\\patient\\patients",
+    "\\src\\app\\patient\\services",
+    "\\src\\app\\shared"
   ],
   "SelectedNode": "\\src\\app\\app.module.ts",
   "PreviewInSolutionExplorer": false

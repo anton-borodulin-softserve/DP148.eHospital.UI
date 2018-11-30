@@ -7,5 +7,6 @@ export class PatientRequest {
     city?: string,
     address?: string,
     phone?: string,
-    email?: string) { }
+    email?: string
+  ) { }
 }
