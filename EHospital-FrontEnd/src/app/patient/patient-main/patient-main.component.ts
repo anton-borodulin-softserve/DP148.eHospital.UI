@@ -12,10 +12,10 @@ export class PatientMainComponent implements OnInit {
 
   public patientsData: Array<PatientViewRequest>;
   public currentPatient: PatientViewRequest;
-
-
-  constructor(private patientService: PatientService) {
-    patientService.getPatients().subscribe(
+  public currentPatientDetails = new PatientRequest();  
+    
+  constructor(private patientService: PatientService) {    
+    this.patientService.getPatients().subscribe(
       res => {
         this.patientsData = res;
         console.log(res);
@@ -30,6 +30,13 @@ export class PatientMainComponent implements OnInit {
   
   public editClicked = function (record) {
     this.currentPatient = record;
-  };
+    this.patientService.getPatientById(record).subscribe(
+      res => {
+        this.currentPatientDetails = res;
+        console.log(res);
+      },
+      err => console.log('Error retrieving patient')
+    );
+  }
 
 }

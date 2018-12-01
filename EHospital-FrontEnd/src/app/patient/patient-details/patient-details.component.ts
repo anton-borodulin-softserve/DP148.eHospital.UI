@@ -10,12 +10,28 @@ import { PatientViewRequest } from '../models/patientView';
 })
 export class PatientDetailsComponent implements OnInit {
 
-  @Input() patient: PatientViewRequest;
+  @Input() patient: PatientRequest;
+  //@Input() patient: PatientViewRequest;
   public patientDetails = new PatientRequest();
 
-  constructor() {    
+  constructor() {
     this.clearPatientData();
   }
+ 
+
+  //constructor(private patientService: PatientService) {
+  //  if (this.patient != null) {
+  //    patientService.getPatientById(this.patient).subscribe(
+  //      res => {
+  //        this.patient = res;
+  //        console.log(res);
+  //      },
+  //      err => console.log('Error retrieving diseases'));
+  //  }
+  //  else {
+  //    this.clearPatientData();
+  //  }    
+  //}
 
   //constructor(private patientService: PatientService) {
   //  patientService.getPatientById(this.patient).subscribe(
@@ -31,7 +47,7 @@ export class PatientDetailsComponent implements OnInit {
   }
 
   private clearPatientData = function () {  
-    this.patientDetails = {
+    this.patient = {
       patientid: undefined,
       firstname: '',
       lastname: '',
